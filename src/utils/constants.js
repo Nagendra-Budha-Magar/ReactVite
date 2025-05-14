@@ -1,0 +1,1 @@
+export const LOGO_URL = 'https://png.pngtree.com/png-vector/20230724/ourmid/pngtree-online-shop-icon-logo-vector-png-image_8582040.png';

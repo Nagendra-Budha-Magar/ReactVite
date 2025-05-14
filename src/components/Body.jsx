@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
-import { productData } from '../utils/productData';
+
 const Body = () => {
-  const [topRatedProducts, setTopRatedProducts] = useState(productData);
+  const [topRatedProducts, setTopRatedProducts] = useState([]);
+
+  useEffect(() => {
+    fetchProducts();
+  },[])
+
+  const fetchProducts = async () => {
+    const data = await fetch('https://fakestoreapi.com/products');
+    const json = await data.json();
+    setTopRatedProducts(json);
+  }
 
   const topRatedProductsData = () => { 
     setTopRatedProducts(productData.filter((product) => product.rating.rate>4));
