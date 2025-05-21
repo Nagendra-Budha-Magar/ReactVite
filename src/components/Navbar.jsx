@@ -1,3 +1,5 @@
+import { FaCartPlus } from "react-icons/fa";
+
 import { LOGO_URL } from "../utils/constants.js";
 const Navbar = () => {
   return (
@@ -16,7 +18,9 @@ const Navbar = () => {
           <a href="">Contact</a>
         </li>
       </div>
-      <div>Cart</div>
+      <button className="mt-4 flex items-center justify-center gap-2 px-5 py-2 bg-blue-500 text-white rounded-lg font-medium text-base hover:bg-blue-600 cursor-pointer transition-colors">
+        <FaCartPlus />
+      </button>
     </nav>
   );
 };
