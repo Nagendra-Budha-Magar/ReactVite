@@ -4,9 +4,13 @@ import "./index.css";
 import App from "./App.jsx";
 import Body from "./components/Body";
 import About from "./components/About";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import Contact from "./components/Contact";
+import Product from "./components/Products.jsx";
+import Cart from "./components/Cart";
 
-export const appRouter = createBrowserRouter([
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <App />,
@@ -18,6 +22,18 @@ export const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "product/:id",
+        element: <Product />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },
